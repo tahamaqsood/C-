@@ -1,0 +1,79 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    public abstract class Login
+    {
+        public string name;
+        public string password;
+        public abstract void log();
+    }
+
+    //For User
+    public class User:Login
+    {
+        public string name = "Usman";
+        public string password = "Gray Hat";
+        public override void log()
+        {
+            Console.Write("Enter name: ");
+            base.name = Console.ReadLine();
+
+            Console.Write("Enter password: ");
+            base.password = Console.ReadLine();
+
+            if (base.name==this.name && base.password==this.password)
+            {
+                Console.WriteLine("Login successfull");
+            }
+            else
+            {
+                Console.WriteLine("Login Failed");
+            }
+        }
+    }
+
+    //For Admin
+    public class Admin:Login
+    {
+        public string name = "Meesum";
+        public string password = "Aptech123";
+        public override void log()
+        {
+            Console.Write("Enter name: ");
+            base.name = Console.ReadLine();
+
+            Console.Write("Enter password: ");
+            base.password = Console.ReadLine();
+
+            if (base.name==this.name && base.password==this.password)
+            {
+                Console.WriteLine("Login Successfull..!");
+            }
+            else
+            {
+                Console.WriteLine("Login Failed");
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //For user
+            Login U;
+            U = new User();
+            U.log();
+
+            //For Admin
+            Login A;
+            A = new Admin();
+            A.log();
+            Console.ReadLine();
+        }
+    }
+}

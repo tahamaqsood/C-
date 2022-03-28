@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace quiz_application
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int score = 1;
+            int subtract = -1;
+            int TotalPoints = 5;
+
+            string[] questions = new string[5]; //For Hard-Coded Questions
+            string[] myanswers = new string[5]; //For Hard-Coded Answers
+            string[] answers = new string[5]; //For User Input
+
+
+            myanswers[0] = "bejing";
+            myanswers[1] = "mariana trench";
+            myanswers[2] = "hockey";
+            myanswers[3] = "new york";
+            myanswers[4] = "neil amstrong";
+
+
+            questions[0] = "what is the capital of china?";
+            questions[1] = "worlds deepest point?";
+            questions[2] = "national sports of pakistan?";
+            questions[3] = "worlds busiest city?";
+            questions[4] = "who was the first man on moon?";
+
+           
+
+            Console.WriteLine("==================");
+            Console.WriteLine("Q U I Z    G A M E");
+            Console.WriteLine("==================");
+            Console.Write("Enter your name: ");
+            string name = Console.ReadLine();
+            for (int i = 0; i < questions.Length; i++)
+            {
+                Console.WriteLine(questions[i]);
+                answers[i] = Console.ReadLine();
+
+                if (answers[i] == myanswers[i])
+                {
+                    Console.WriteLine("--------------------------------------");
+                    Console.WriteLine("Correct " + "\t\t" + score + " Points added");
+                    Console.WriteLine("--------------------------------------");
+                    score++;
+                    Console.Write("\n\n"); //For extra spaces    
+                }
+                else
+                {
+                    Console.WriteLine("--------------------------------------");
+                    Console.WriteLine("Incorrect" + "\t       No Points added");
+                    Console.WriteLine("--------------------------------------");
+                }
+            }
+            Console.WriteLine(); //For extra spaces
+            Console.WriteLine("======================");
+            Console.Write(name + " Your score is: ");
+            Console.Write(score + subtract);
+            Console.WriteLine();//For extra spaces
+            Console.WriteLine("======================");
+            //Subtracting points from incorrect answers...
+            int CorrectAnswers = score + subtract;
+            int IncorrectAnswers = TotalPoints - CorrectAnswers;
+            Console.WriteLine("=======================");
+            Console.WriteLine(IncorrectAnswers + " Answers are incorrect");
+            Console.WriteLine("=======================");
+            string[] count = new string[5] {"1st","2nd","3rd","4th","5th"};
+            for (int i = 0; i < 5; i++)
+            {
+                if (answers[i] != myanswers[i])
+                {
+                    Console.WriteLine("Correct answer of "+count[i]+" question is "+myanswers[i]);            
+                }
+                else
+                {
+                    Console.Write("");
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}

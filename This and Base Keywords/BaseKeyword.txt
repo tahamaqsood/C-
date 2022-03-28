@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    //Base Class
+    public class demo
+    {
+        public int num1 = 10;
+        public int num2 = 20;
+        public void print()
+        {
+            num1 = 5;
+            num2 = 7;
+            int result = num1 + num2;
+            Console.WriteLine("Answer is: "+result);
+        }
+    } 
+
+    //Derived Class
+    public class dummy:demo
+    {
+        public int num1 = 3;
+        public int num2 = 15; 
+        public void print()
+        {
+            int result = base.num1 + base.num2;
+            Console.WriteLine("Answer is: "+result);     
+        }
+    }
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            dummy obj = new dummy();
+            obj.print();
+            Console.ReadLine();
+        }
+    }
+}

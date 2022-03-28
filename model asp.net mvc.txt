@@ -1,0 +1,47 @@
+Add Controller
+MVC 5 Controller Empty
+Add View
+add model 
+-> class (emplyes name)
+Program 
+public class Employee
+{
+  Public int ID { get; set;}
+
+  Public string Name { get; set;}
+
+  Public string Address { get ; set;}
+}
+
+Now to use model we have to add name sapce of model in controller page
+using ModelsInMVC.Models;
+programing after return view
+private modelname Getmodelname()
+{
+return new modelname()
+{
+ID = 1,
+Address = "Pakistan" ,
+Name = "Nabil"
+};
+
+ now add line on uper of return view 
+var data = Getmodelname();
+return View(data);
+Now add Line on HTML view
+@model ModelsInMVC.Models. wo name jis name sy modle bnaya h
+
+<Body>
+<table>
+<tbody>
+<tr>
+<td>
+ID
+</td>
+<td>
+@Model.
+</td>
+</tr>
+</tbody>
+</table>
+</body>

@@ -1,0 +1,90 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication22
+{
+    public abstract class Calculator
+    {
+        public virtual void Computing()
+        {
+            Console.WriteLine("M Y    C A L C U L A T O R");
+        }
+    }
+    public class Addition:Calculator
+    {
+
+        public override void Computing()
+        {
+            Console.Write("Enter value 1: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter value 2: ");
+            int num2 = int.Parse(Console.ReadLine());
+            int result = num1 + num2;
+            Console.WriteLine("Answer is: "+result);
+        }
+    }
+    public class Subtraction:Calculator
+    {
+        public override void Computing()
+        {
+            Console.Write("Enter value 1: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter value 2: ");
+            int num2 = int.Parse(Console.ReadLine());
+            int result = num1 - num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+
+    public class Multiplication:Calculator
+    {
+        public override void Computing()
+        {
+            Console.Write("Enter value 1: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter value 2: ");
+            int num2 = int.Parse(Console.ReadLine());
+            int result = num1 * num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+
+    public class Division:Calculator
+    {
+        public override void Computing()
+        {
+            Console.Write("Enter value 1: ");
+            int num1 = int.Parse(Console.ReadLine());
+            Console.Write("Enter value 2: ");
+            int num2 = int.Parse(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator c;
+
+            c = new Addition();
+            c.Computing();
+
+            c = new Subtraction();
+            c.Computing();
+
+            c = new Multiplication();
+            c.Computing();
+
+            c = new Division();
+            c.Computing();
+
+            Console.ReadLine();
+            
+
+        }
+    }
+}
