@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practice
+{ 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //User Input....
+            Console.Write("Enter Username: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter Password: ");
+            string password = Console.ReadLine();
+
+
+            //Switch Case...
+            switch (name)
+            {
+                //Multiple Cases = "Usman"  || "Bilal"  || "Ali" (Conditional Operator = OR) 
+                case "Usman":
+                case "Bilal":
+                case "Ali":
+                
+                    //Nested Switch
+                    switch(password)
+                    {
+                        //Multiple Cases = "Gray Hat" || "White Hat" || "Black Hat" (OR Operator)
+                        case "Gray Hat":    
+                        case "White Hat":  
+                        case "Black Hat":
+                            Console.WriteLine("Login Successfull...!");
+                            break;
+
+                        default:
+                            Console.WriteLine("Login Failed...!");
+                            break;
+                    }
+
+                    break;
+
+                default:
+                    Console.WriteLine("Login Failed...!");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

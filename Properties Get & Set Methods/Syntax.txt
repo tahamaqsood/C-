@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    class Properties123
+    {
+        private string _password;//Underscore _ is just for recogniztion of the private variable
+        public string password //Property syntax..
+        {
+            get
+            {
+                return _password;  //return private field/variable
+            }
+            set
+            {
+                _password = value; //private field/variable = value;
+            }
+        }
+    }   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Properties123 obj = new Properties123();
+            obj.password = "Abcd"; //Set Value throught Set Accessor...
+            Console.WriteLine(obj.password); //Return Value through Get Accessor...
+            Console.ReadLine();
+        }
+    }
+    
+}

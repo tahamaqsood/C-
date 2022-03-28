@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    public class demo
+    {
+        private string userpassword = "Gray Hat";
+        private Int64 usercontact = 03353307493;
+        
+        public string pass
+        {
+            get
+            {
+                return userpassword;
+            }
+            set
+            {
+                userpassword = value;
+            }
+        }
+        public Int64 cont
+        {
+            get
+            {
+                return usercontact;
+            }
+            set
+            {
+                usercontact = value;
+            }
+        }                                   
+    } 
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            demo obj = new demo();
+            Console.WriteLine("User password is: "+obj.pass);
+            Console.WriteLine("User contact is: "+obj.cont);
+            Console.ReadLine();
+        }
+    }
+}

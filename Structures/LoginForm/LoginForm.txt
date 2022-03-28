@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    //Creating Structure// (Variables can only be declared in Structure)
+
+   struct logindetails
+    {
+        public string username;  //For hard coded
+        public string userpassword; //For hard coded
+
+        public string uname; //For taking input from user
+        public string upassword; //For taking input from user
+    }
+
+    //Abstract class
+    public abstract class login
+    {
+        //Abstract method
+        public abstract void log();
+    }
+
+    public class demo:login
+    {
+        public override void log()
+        {
+            //Caling structure variables in method//
+            logindetails l;
+            l.username = "Usman";
+            l.userpassword = "Gray Hat";
+
+            Console.Write("Enter name: ");
+            l.uname = Console.ReadLine(); 
+
+            Console.Write("Enter password: ");
+            l.upassword = Console.ReadLine(); 
+
+
+            //Using Structure variables in condition 
+            if (l.username==l.uname && l.userpassword==l.upassword)
+            {
+                Console.WriteLine("Login Successful");
+            }
+            else
+            {
+                Console.WriteLine("Login Failed");
+            }          
+        }
+    }
+       
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            login s;
+            s = new demo();
+            s.log();
+            Console.ReadLine();
+        }
+    }
+}

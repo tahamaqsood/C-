@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication23
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows, numbers;
+            for(rows = 1; rows <=10; rows++)
+            {
+                
+                for(numbers=rows;numbers<=10;numbers++)
+                {
+                    Console.Write(" ");
+                    Console.Write(numbers);
+                    
+                }
+                Console.WriteLine();
+
+            }
+            
+            Console.ReadLine();
+        }
+    }
+}

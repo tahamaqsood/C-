@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows;
+            int spaces; 
+            int pyramid;
+            int FixedValue = 2;
+
+            //For number of rows
+            for(rows = 1; rows<=21;rows++)
+            {
+
+                //For number of spaces
+                for(spaces = rows; spaces<=37; spaces++)
+                {
+                    Console.Write(" ");
+                }
+
+                //For number of pyramid sign
+                for(pyramid = 1; pyramid <= FixedValue*rows-1; pyramid++)
+                {
+                    Console.Write("^");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}

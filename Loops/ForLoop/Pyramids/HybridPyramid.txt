@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication22
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows;
+            int spaces;
+            int pyramids;
+
+            //For number of rows
+            for (rows = 1; rows <= 20; rows++)
+            {
+                //For number of spaces
+                for (spaces = rows; spaces <= 19; spaces++)
+                {
+                    Console.Write(" ");
+                }
+                //For numbers of stars * 
+                for (pyramids = 1; pyramids <= 2 * rows - 1; pyramids++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+
+            }
+            Console.WriteLine("\n");
+
+
+            //For Reverse Pyramid//
+            //For number of rows
+            for (rows = 1; rows <= 20; rows++)
+            {
+                //For number of spaces
+                for (spaces = 2; spaces <= rows; spaces++)
+                {
+                    Console.Write(" ");
+                }
+
+                //For number of stars * 
+                for (pyramids = 2 * rows - 1; pyramids <= 39; pyramids++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

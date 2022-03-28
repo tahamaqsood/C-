@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    struct Aptech
+    {
+        public string std_name;
+        public int std_age;
+        private int std_id;
+        //Now we will use property to access private field or variable
+        //Property:
+        public int StudentID
+        {
+            get
+            {
+                return std_id;
+            }
+            set
+            {
+                std_id = value;
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //For Public variables
+            Aptech a;
+            a.std_name = "Usman";
+            a.std_age = 21;
+
+            //For private variable
+            Aptech b;
+            b = new Aptech(); //Always make object to initialize and print properties..
+            b.StudentID = 2017; // "StudentID" is property name...
+            
+            //Printing
+            Console.WriteLine("Student name is: "+a.std_name); //a.Variable name
+            Console.WriteLine("Student age is: "+a.std_age);   //a.Variable name
+            Console.WriteLine("Student id is: "+b.StudentID);  //b.Property name
+            Console.ReadLine();          
+        }
+    }   
+}

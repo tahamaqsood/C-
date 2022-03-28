@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Variables can only be declared in structure. 
+    //Variables cannot initialized in structure.
+   struct Aptech
+    {
+        public string Student_Names;
+        public string Teacher_Names;
+        public int fees;       
+    }
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Here we are initializing structure's variables
+            Aptech a;
+            a.Student_Names = "Usman";
+            a.Teacher_Names = "Meesum";
+            a.fees = 6000;
+            //Printing
+            Console.WriteLine("Student name is "+a.Student_Names);
+            Console.WriteLine("Teacher name is "+a.Teacher_Names);
+            Console.WriteLine("Monthly fees is "+a.fees);
+
+            Console.WriteLine();
+            Console.WriteLine();
+
+            //Printing in escape sequnce way
+            Console.WriteLine("Student name is {0} \nTeacher name is {1}\nFees is {2}",a.Student_Names,a.Teacher_Names,a.fees);
+            Console.ReadLine();
+        }
+    }
+}

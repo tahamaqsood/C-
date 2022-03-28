@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    class Properties123
+    {
+        private int Usman_number = 912017;
+        public int GetNumber
+        {
+            get
+            {
+                return Usman_number;
+            }        
+        }
+    }   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Properties123 obj = new Properties123();
+            Console.WriteLine("Usman's number is: "+obj.GetNumber);
+            Console.ReadLine();
+        }
+    }
+    
+}

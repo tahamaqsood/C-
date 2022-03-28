@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    //Read Only Property {Get Accessor}// 
+    public class Books
+    {
+        private string _bookName;
+        private int _bookPrice;
+
+        public Books(string name, int price)//Using class name to define different data types..
+        {
+            _bookName = name;
+            _bookPrice = price; 
+        }
+        //Property for Book Name:
+        public string BookName
+        {
+            get
+            {
+                return _bookName;
+            }         
+        }
+        //Property for Book Price:
+        public int BookPrice
+        {
+            get
+            {
+                return _bookPrice;
+            }
+        }
+    }       
+    class Program
+    {    
+        static void Main(string[] args)
+        {
+            //Without using set accessor...
+            Books obj = new Books("Learn C# in 21 days",5000);
+            Console.WriteLine("Book name is: "+obj.BookName);
+            Console.WriteLine("Book price is: "+obj.BookPrice);
+            Console.ReadLine();
+        }
+    }   
+}

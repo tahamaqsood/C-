@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your value one ");
+            int value1 = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Enter your value two ");
+            int value2 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter Your Arthematic operator");
+            char sign = Convert.ToChar(Console.ReadLine());
+
+            switch (sign)
+            {
+                //Addition +
+                case '+':
+                    int add = value1 + value2;
+                    Console.WriteLine("Answer is "+add);
+                    break;
+
+
+                    //Subtraction -
+                case '-':
+                    int subtract = value1 - value2;
+                    Console.WriteLine("Answer is " + subtract);
+                    break;
+
+
+                    //Multiplication *
+                case '*':
+                    int multiply = value1 * value2;
+                    Console.WriteLine("Answer is " + multiply);
+                    break;
+
+
+                    //Division /
+                case '/':
+                    int Division = value1 / value2;
+                    Console.WriteLine("Answer is " + Division);
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Operator");
+                    break;
+            }
+            Console.ReadLine();
+
+        }
+    }
+}

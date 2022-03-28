@@ -1,0 +1,47 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Login Form (Using Nested Switch Case...)
+
+            Console.Write("Enter Username: ");
+            string name = Console.ReadLine();
+
+            Console.Write("Enter password: ");
+            string password = Console.ReadLine();
+
+
+            //Outer Switch
+            switch (name) 
+            {
+                case "Usman":
+                    
+                    //Inner Switch
+                    switch(password)
+                    {
+                        case "Gray Hat":
+                            Console.WriteLine("Login Successful....!");
+                            break;
+
+                        default:
+                            Console.WriteLine("Invalid Password....!");
+                            break;
+                    }
+                    break;
+
+                default:
+                    Console.WriteLine("Invalid Username....!");
+                    break;
+            }
+            Console.ReadLine();
+        }
+    }
+}

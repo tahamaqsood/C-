@@ -1,0 +1,119 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication3
+{
+    public class Triangle
+    {
+        public string value;
+        public void pyramid()
+        {
+            Console.WriteLine("Enter value to get your angle: ");
+            value = Console.ReadLine();
+
+            if (value=="Left" || value=="left" || value=="LEFT")
+            {
+                for(int rows=1;rows<=10;rows++)
+                {
+                    for(int spaces=rows;spaces<=9;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramids=1;pyramids<=rows;pyramids++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }           
+            }
+            else if(value=="Right" || value=="right" || value=="RIGHT")
+            {
+                for(int rows=1;rows<=10;rows++)
+                {
+                    for(int spaces=rows;spaces<=0;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramid=1;pyramid<=rows;pyramid++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else if (value=="Full" || value=="full"||value=="FULL")
+            {
+                for(int rows=1;rows<=10;rows++)
+                {
+                    for(int spaces=rows;spaces<=9;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramid=1;pyramid<=rows*2-1;pyramid++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else if (value=="Reverse" || value=="reverse" || value=="REVERSE")
+            {
+                for(int rows = 1; rows<=10;rows++)
+                {
+                    for(int spaces=2;spaces<=rows;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramid=rows*2-1;pyramid<=19;pyramid++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else if(value=="Reverse Left"||value=="reverse left"|| value=="REVERSE LEFT")
+            {
+                for(int rows=1; rows<=10;rows++)
+                {
+                    for(int spaces=2;spaces<=rows;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramid=rows;pyramid<=10;pyramid++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            else if (value=="Reverse Right"||value=="reverse right"||value=="REVERSE RIGHT")
+            {
+                for(int rows=1;rows<=10;rows++)
+                {
+                    for(int spaces=10;spaces<=rows;spaces++)
+                    {
+                        Console.Write(" ");
+                    }
+                    for(int pyramid=rows;pyramid<=9;pyramid++)
+                    {
+                        Console.Write("*");
+                    }
+                    Console.WriteLine();
+                }
+            }
+            
+        }
+    }  
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Triangle obj = new Triangle();
+            obj.pyramid();
+            Console.ReadLine();
+        }
+    }
+}

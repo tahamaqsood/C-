@@ -1,0 +1,57 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication26
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string name1 = "Usman";
+            string name2 = "Raheel";
+            string name3 = "Shahzaib";
+            string name4 = "Danish";
+
+
+            //Replacement...
+            //Now we will change name 4 "Danish" to "Bilal"
+            string ReplaceName; //Declared//
+            ReplaceName = name4.Replace(name4, "Bilal"); //Hard coded...
+            Console.WriteLine(ReplaceName);
+
+
+
+
+            //Another way....
+            string AdminName1 = "Ali";
+            string AdminName2 = "Salar";
+            string AdminName3 = "Hira";
+            string AdminName4 = "Rizwan";
+
+
+            //Replacement...
+            //Now we will change Admin name 4 "Rizwan" to "Maham"
+            string ReplaceAdminName = "Maham"; //Initialized//
+            ReplaceAdminName = AdminName4.Replace(AdminName4, ReplaceAdminName); //Pass variable instead of hard coded
+            Console.WriteLine(ReplaceAdminName);
+
+
+
+
+            //We can also print it like this way...
+            string City1 = "Karachi";
+            string City2 = "Lahore";
+            string City3 = "Quetta";
+            //Replacement
+            //Now we will change City 3 name "Quetta" to "Islamabad"
+
+            string UpdateName = "Islamabad";
+            City3.Replace(City3, UpdateName);
+            Console.WriteLine(UpdateName);
+            Console.ReadLine();
+        }
+    }
+}

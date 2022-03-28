@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication24
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           
+            int rows, col, count = 0;
+
+            for(rows = 1; rows<=5;rows++)
+            {
+                for(col=1;col<=rows;col++)
+                {
+                    Console.Write(" "+count);
+                    count = count + 2;          
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }

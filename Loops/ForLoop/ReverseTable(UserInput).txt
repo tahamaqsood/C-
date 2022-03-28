@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace practice4
+{  
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Reverse Table.... (Fully Dependent on user)...
+
+            Console.Write("Which table you want to display: ");
+            int table = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Starting point: ");
+            int sp = int.Parse(Console.ReadLine());     //sp = Starting Point....
+
+            Console.Write("Enter Ending point: ");
+            int ep = int.Parse(Console.ReadLine());     //ep = Ending point....
+
+            for (int i = ep; i >= sp; i--)
+            {
+                Console.WriteLine(table+"x"+i+"="+table*i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

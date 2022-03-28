@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    struct value
+    {
+       //Variables in Structure cannot be initialized, they can be declared only.
+       //Structure is value type that can hold values of different data types.
+
+        public int val1;
+        public int val2;
+        public string name;
+        public char symbol;
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            value v;
+            v.val1 = 10;
+            v.val2 = 12;
+            v.name = "Usman";
+            v.symbol = '$';
+
+            Console.WriteLine("Value one is : "+v.val1);
+            Console.WriteLine("Value two is: "+v.val2);
+            Console.WriteLine("Name is : "+v.name);
+            Console.WriteLine("Symbol is: "+v.symbol);
+
+            //Another way of printing//
+            /*Console.WriteLine("Value one is {0} \nvalue 2 is {1} \nname is {2} \nsymbol is {3}",v.val1,v.val2,v.name,v.symbol);*/
+            
+            Console.ReadLine();
+        }
+    }
+}

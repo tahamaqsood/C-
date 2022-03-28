@@ -1,0 +1,35 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    public class demo
+    {
+        private string UserPassword;
+        public string refer
+        {
+            get
+            {
+                return UserPassword;
+            }
+            set
+            {
+                UserPassword = value;
+            }
+        }
+    }
+    class Program
+    {
+        
+        static void Main(string[] args)
+        {
+            demo obj = new demo();
+            obj.refer = "Gray Hat"; //Set Value {With the help of Set Accessor}
+            Console.WriteLine(obj.refer); //Return Value {With the help of Get Accessor}
+            Console.ReadLine();
+        }
+    }
+}

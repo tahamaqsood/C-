@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SwitchCase
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Switch Case (Week days)//
+            Console.WriteLine("Enter your day");
+            string day = Console.ReadLine();
+      
+            switch (day)
+            {
+                case "Monday":
+                    Console.WriteLine("Your day is "+day);
+                    break;
+
+                case "Tuesday":
+                    Console.WriteLine("Your day is "+day);
+                    break;
+
+                case "Wednesday":
+                    Console.WriteLine("Your day is "+day);
+                    break;
+
+                case "Thursday":
+                    Console.WriteLine("Your day is "+day);
+                    break;
+
+                default: //Default is last block just like 'else' in IF ELSE CONDITION//
+                    Console.WriteLine("Invalid Day");
+                    break;
+                    
+            }
+            Console.ReadLine();
+        }
+    }
+}

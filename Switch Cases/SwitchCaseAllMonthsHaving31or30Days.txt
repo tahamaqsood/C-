@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SwitchCaseMonthWithDays
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your month number only in digits");
+
+            //Taking input from user//
+            int month = Convert.ToInt32(Console.ReadLine());
+
+
+            switch (month)
+
+            {     
+                case 1:
+                    Console.WriteLine("Your Month is January and it has 31 days");
+                    break;
+
+                  
+                case 3:
+                    Console.WriteLine("Your Month is March and it has 31 days");
+                    break;
+
+                  
+                case 5:
+                    Console.WriteLine("Your Month is May and it has 31 days");
+                    break;
+
+                  
+                case 7:
+                    Console.WriteLine("Your Month is July and it has 31 days");
+                    break;
+
+                  
+                case 8:
+                    Console.WriteLine("Your Month is August and it has 31 days");
+                    break;
+
+                  
+                case 10:
+                    Console.WriteLine("Your Month is October and it has 31 days");
+                    break;
+
+                  
+                case 12:
+                    Console.WriteLine("Your Month is December and it has 31 days");
+                    break;
+
+                  
+                case 4:
+                    Console.WriteLine("Your Month is April and it has 30 days");
+                    break;
+
+                  
+                case 6:
+                    Console.WriteLine("Your Month is June and it has 30 days");
+                    break;
+
+                  
+                case 9:
+                    Console.WriteLine("Your Month is September and it has 30 days");
+                    break;
+
+                  
+                case 11:
+                    Console.WriteLine("Your Month is November and it has 30 days");
+                    break;
+
+                  
+                case 2:
+                    Console.WriteLine("Your Month is February and it has 28 or maybe 29 days");
+                    break;
+                default:
+                    Console.WriteLine("Invalid value");
+                    break;
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

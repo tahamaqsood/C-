@@ -1,0 +1,50 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Properties
+{
+    //Write Only Property {Set Accessor}
+    public class Book
+    {
+        private string _bookName;
+        private int _bookPrice;
+
+        public void Display()
+        {
+            Console.WriteLine("Book name is: "+_bookName);
+            Console.WriteLine("Book price is: "+_bookPrice);
+        }
+
+        //Property for Book Name
+        public string BookName
+        {
+            set
+            {
+                _bookName = value;
+            }
+        }
+
+        //Property for Book Price
+        public int BookPrice
+        {
+            set
+            {
+                _bookPrice = value;
+            }
+        }
+    }    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Book obj = new Book();
+            obj.BookName = "Learn C# in 21 Days";
+            obj.BookPrice = 5000;
+            obj.Display();
+            Console.ReadLine();
+        }
+    }
+}
