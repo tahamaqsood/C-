@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Declaration:
+            //Declaration without using new keyword
+            int[,] rollno;
+
+
+            //Declaration by using new keyword 
+            int[,] std_id = new int[2, 3];
+
+
+
+            //Initialization:
+            //Declaration-With-Intialization without using new keyword
+            int[,] admin_id = { { 51, 52, 53 }, { 61, 62, 63 } }; //Two rows , Three Columns
+
+
+            //Declaration-With-Initialization by using new keyword:[Without range] = Infinite Range
+            //Three Rows , Two Columns
+            int[,] user_id = new int[,] { { 31, 32, 32 },{ 81,82,82 } };
+
+
+            //Declaration-With-Initialization by using new keyword:[With Range]
+            //Three rows, Three columns
+            int[,] moderator_id = new int[3,3] { { 31, 32, 32 }, { 81, 82, 82 }, { 21, 22, 23 } };
+
+
+            Console.ReadLine();
+
+
+
+
+        }
+    }
+}

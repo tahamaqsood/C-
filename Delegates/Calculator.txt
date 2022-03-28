@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegates
+{
+    class Calculation
+    {
+        public delegate int Calculator(int NumOne, int NumTwo);
+
+        //Addition
+        static int Addition(int NumOne , int NumTwo)
+        {
+            return(NumOne + NumTwo);
+        }
+
+        //Subtraction
+        static int Subtraction(int NumOne,int NumTwo)
+        {
+            return (NumOne - NumTwo);
+        }
+
+        //Multiplication
+        static int Multiplication(int NumOne, int NumTwo)
+        {
+            return(NumOne * NumTwo);
+        }
+
+        //Division
+        static int Division(int NumOne, int NumTwo)
+        {
+            return(NumOne / NumTwo);
+        }
+
+        static void Main(string[] args)
+        {
+            int ValueOne = 10;
+            int ValueTwo = 2;
+
+            Console.WriteLine(">>>FOR ADDITION<<<");
+            //For Addition
+            Calculator obj = new Calculator(Addition);
+
+            Console.WriteLine("Value One is: "+ValueOne);
+            Console.WriteLine("Value Two is: "+ValueTwo);
+            Console.WriteLine("Answer is: "+obj(ValueOne,ValueTwo));
+            Console.WriteLine("\n"); //For space
+
+           
+            Console.WriteLine(">>>FOR SUBTRACTION<<<");
+            //For Subtraction
+            Calculator obj1 = new Calculator(Subtraction);
+
+            Console.WriteLine("Value One is: "+ValueOne);
+            Console.WriteLine("Value Two is: " + ValueTwo);
+            Console.WriteLine("Answer is: " + obj1(ValueOne, ValueTwo));
+            Console.WriteLine("\n"); //For space
+
+
+            Console.WriteLine(">>>FOR MULTIPLICATION<<<");
+            //For Multiplication
+            Calculator obj2 = new Calculator(Multiplication);
+            Console.WriteLine("Value One is: " + ValueOne);
+            Console.WriteLine("Value Two is: " + ValueTwo);
+            Console.WriteLine("Answer is: " + obj2(ValueOne, ValueTwo));
+            Console.WriteLine("\n"); //For space
+
+
+            Console.WriteLine(">>>FOR DIVISION<<<");
+            //For Division
+            Calculator obj3 = new Calculator(Division);
+            Console.WriteLine("Value One is: " + ValueOne);
+            Console.WriteLine("Value Two is: " + ValueTwo);
+            Console.WriteLine("Answer is: " + obj3(ValueOne, ValueTwo));
+            Console.ReadLine();
+        }       
+    }
+}

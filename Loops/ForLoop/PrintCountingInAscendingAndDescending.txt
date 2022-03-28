@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice4
+{
+    
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Ascending Order...");
+            for (int i = 1; i <= 10; i++)
+            {
+                Console.WriteLine(i);
+            }
+            Console.WriteLine("\nDescending Order");
+            for (int i = 10; i > 0; i--)
+            {
+                Console.WriteLine(i);
+            }
+            Console.ReadLine();
+        }
+    }
+}

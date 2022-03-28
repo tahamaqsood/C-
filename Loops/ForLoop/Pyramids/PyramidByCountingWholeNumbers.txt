@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace PyramidByCounting
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows;
+            int col;
+            int count = 1;
+
+            for(rows=1; rows<=5; rows++)
+            {
+                for(col=1;col<=rows;col++)
+                {
+                    Console.Write(" "+count);
+                    count++;
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+            
+           
+        }
+    }
+}

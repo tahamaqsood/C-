@@ -1,0 +1,29 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Conversions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Implicit Conversion Which compiler does it for you itself..(Small data type convert into big data type)
+            int i = 100;
+            float MyFloat;
+
+            //Conversion
+            MyFloat = i;
+            Console.WriteLine("Value of int is: "+i);
+            Console.WriteLine("After Type Casting, Value of Float is also: " + MyFloat);
+            //Both statements will provide the same result
+
+
+            Console.ReadLine();
+
+
+        }
+    }
+}

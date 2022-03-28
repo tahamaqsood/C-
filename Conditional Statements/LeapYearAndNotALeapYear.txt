@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace LeapYearOrNotALeapYear
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter your value to know about whether a year is leap or not");
+            int val = Convert.ToInt32(Console.ReadLine());
+
+
+            if ((val%4)==0)
+            {
+                Console.WriteLine(val+" is a Leap year");
+            }
+
+
+            else if ((val%4)==0 && (val%100)==0)
+            {
+                Console.WriteLine(val+ "is a leap year");
+            }
+
+
+            else if ((val%4)==0 && (val%100)!=0)
+            {
+                Console.WriteLine(val+ "is leap year");
+            }
+
+
+            else if ((val%100)==0 && (val%4)!=0)
+            {
+                Console.WriteLine(val+ " is not a leap year");
+            }
+            
+            
+            else if ((val%4) !=0)
+            {
+                Console.WriteLine(val+ " is not a leap year");
+            }
+            else
+            {
+                Console.WriteLine("Invalid year");
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,96 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication8
+{
+    public interface Human
+    {
+        void eat();
+        void walk();
+    }
+    public class Usman:Human
+    {
+        public void eat()
+        {
+            Console.WriteLine("Usman is eating");
+        }
+        public void walk()
+        {
+            Console.WriteLine("Usman is walking");
+        }
+    }
+    public class Rida:Human
+    {
+        public void eat()
+        {
+            Console.WriteLine("Rida is eating");
+        }
+        public void walk()
+        {
+            Console.WriteLine("Rida is walking");
+        }
+    }
+   public interface Car
+    {
+        void driving();
+        void freeze();
+    }
+    public class Lambhorghini:Car
+    {
+        public void driving()
+        {
+            Console.WriteLine("Lambhorghini is being drived");
+        }
+        public void freeze()
+        {
+            Console.WriteLine("Lambhorghini stopped");
+        }
+    }
+    public class Civic:Car
+    {
+        public void driving()
+        {
+            Console.WriteLine("Civic is being drived");
+        }
+        public void freeze()
+        {
+            Console.WriteLine("Civic has stopped");
+        }
+    } 
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //For Human
+            //Usman
+            Human u;
+            u = new Usman();
+            u.eat();
+            u.walk();
+
+            //Rida
+            Human r;
+            r = new Rida();
+            r.eat();
+            r.walk();
+
+            //For Cars
+            //Lambhorghini
+            Car c;
+            c = new Lambhorghini();
+            c.driving();
+            c.freeze();
+
+            //Civic
+            c = new Civic();
+            c.driving();
+            c.freeze();
+            Console.ReadLine();
+            
+            
+        }
+    }
+}

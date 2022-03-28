@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Conversions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int i;
+            int s;
+            Console.WriteLine("Enter number 1: ");
+            //User input will be saved as string format therefore we have to convert it into integer.
+            //"Convert is class"      ".To is method"
+            i = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.WriteLine("Enter number 2: ");
+            //Another way to Convert String into integer.
+            //(Through Parse method).
+            s = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Number 1 is: "+i);
+            Console.WriteLine("Number 2 is: "+s);
+            Console.ReadLine();
+        }
+    }
+}

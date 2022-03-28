@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Abstraction
+{
+    class Program
+    {
+        // Use "abstract" keyword in Abstract class and function....
+        public abstract class Shape
+        {
+            // Abstract function doesn't contain body (Block of code).......
+            public abstract void draw();
+        }
+
+
+        // Class:1......
+        public class Rectangle:Shape
+        {
+            // Use override Keyword......
+            public override void draw()
+            {
+                Console.WriteLine("Rectangle is drawing");
+            }
+        }
+
+
+        // Class:2......
+        public class Circle:Shape
+        {
+            // Use override Keyword......
+            public override void draw()
+            {
+                Console.WriteLine("Circle is drawing");
+            }
+        }
+         
+
+        // Class:3......
+        public class Triangle:Shape
+        {
+            // Use override Keyword......
+            public override void draw()
+            {
+                Console.WriteLine("Triangle is drawing");
+            }
+        }
+
+        static void Main(string[] args)
+        {
+            Shape s;
+            s = new Rectangle();
+            s.draw();
+
+
+            s = new Circle();  
+            s.draw();
+
+
+            s = new Triangle();
+            s.draw();
+        }
+    }
+}

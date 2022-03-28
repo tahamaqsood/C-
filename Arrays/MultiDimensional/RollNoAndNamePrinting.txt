@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication15
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {  
+                                              //Row:1            Row:2          Row:3
+                                              
+                                           // C1  C2  C3      C1  C2  C3      C1  C2  C3
+            int[,] rollno = new int[3, 3] { { 91, 92, 93 }, { 94, 95, 96 }, { 97, 98, 99 } };
+
+
+                                                           
+            
+            string[,] name = new string[2, 3] { { "Usman", "Raheel", "Bilal" }, { "Ali", "Rizwan", "Salar" } };
+
+            Console.WriteLine("Roll No:  "+rollno[2,1]+"   "+rollno[2,2]);
+            Console.WriteLine("Names:  "+name[1,2]+" "+name[0,2]);
+
+            Console.ReadKey();
+
+        }
+    }
+}

@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace ConsoleApplication30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Before using Array list you have to add namespace using System.Collections;
+            ArrayList obj = new ArrayList(); //No need to define data type..
+            obj.Add(12); //Takes int data type automatically..
+            obj.Add("Usman"); //Takes string data type automatically...
+            obj.Add(23.01f); //Takes float data type automatically...
+
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }                         
+}

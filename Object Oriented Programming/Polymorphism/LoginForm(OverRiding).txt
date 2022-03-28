@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication5
+{
+    //Polymorphism
+    //Method Overriding
+    public class Admin
+    {
+        public string adName = "Meesum";
+        public string adPassword = "Aptech";
+        public void login(string adminName,string adminPassword)
+        {
+           Console.BackgroundColor = ConsoleColor.DarkCyan; Console.WriteLine(">>> ADMIN LOGIN FORM <<<");
+           Console.BackgroundColor = ConsoleColor.Black; Console.Write("Enter Admin name: ");
+           adminName = Console.ReadLine();
+           Console.Write("Enter Admin password: ");
+           adminPassword = Console.ReadLine();
+            if (adminName==adName&&adminPassword==adPassword)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkGray; Console.WriteLine("Login Successful...!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("Login Failed...!!");
+            }
+        }
+    }
+    public class User
+    {
+        public string uname = "Usman";
+        public string upassword = "Gray Hat";
+        public void login(string userName,string userPassword)
+        {
+            Console.BackgroundColor = ConsoleColor.DarkCyan; Console.WriteLine("\n>>> USER LOGIN FORM <<<");
+            Console.BackgroundColor = ConsoleColor.Black; Console.Write("Enter user name: ");
+            userName = Console.ReadLine();
+            Console.Write("Enter user password: ");
+            userPassword = Console.ReadLine();
+            if (userName==uname&&userPassword==upassword)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkGray; Console.WriteLine("Login successful...!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("Login Failed...!");
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Admin obj = new Admin();
+            obj.login("Meesum", "Aptech");
+            User obj1 = new User();
+            obj1.login("Usman", "Gray Hat");
+            Console.ReadLine();
+           
+        }
+    }
+}

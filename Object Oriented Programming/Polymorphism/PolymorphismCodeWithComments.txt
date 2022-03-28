@@ -1,0 +1,49 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Polymorphism
+{
+    class Program
+    {
+
+        // Method:1 (Two parameters).......
+        public int sum(int a, int b)
+        {
+            return a + b;
+        }
+
+
+
+        // Method:2 (Same data type but Multiple parameters).......
+        public int sum(int a, int b, int c)
+        {
+            return a + b + c;
+        }
+
+
+
+        //Method:3 (Two parameters but different data types).......
+        public float sum(float a, float b)
+        {
+            return a + b;
+        }
+
+
+        static void Main(string[] args)
+        {
+        //Make object & hold it in variable.........
+            Program p = new Program();
+            int ResultTwo = p.sum(2, 4);
+            int ResultThree = p.sum(3, 4, 9);
+            float ResultFloat = p.sum(1.7f, 3.9f);
+
+
+            Console.WriteLine("Answer of sum of two is " + ResultTwo);
+            Console.WriteLine("Answer of sum of three is " + ResultThree);
+            Console.WriteLine("Answer of float is " + ResultFloat);
+        }
+    }
+}

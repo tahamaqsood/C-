@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication22
+{
+    //Abstract class can contain Abstract methods as well as Non abstract methods
+    public abstract class Human //Abstract class
+    {
+        public abstract void eat(); //Abstract method.
+        public abstract void sleep(); //Abstract method.
+        public void run() //Non abstract method and therefore it can contain body.
+        {
+            Console.WriteLine("Human is running so fast");
+        }
+    }
+    public class implementation : Human
+    {
+        //Now here we override all abstract methods. (Only abstract methods can be overridden)
+        public override void eat()
+        {
+            Console.WriteLine("Human is eating");
+        }
+        public override void sleep()
+        {
+            Console.WriteLine("Human is sleeping peacefully");
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Human h;
+            h = new implementation();
+            h.eat();
+            h.sleep();
+            h.run();
+            Console.ReadKey();
+        }
+    }
+}

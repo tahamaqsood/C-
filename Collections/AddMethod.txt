@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Names = new List<string>()
+            {
+                "Usman","Ali","Bilal","Raheel","Saad"
+            };
+            Names.Add("Talha"); //This record will be added in last index.. 
+           
+            foreach (var item in Names)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}

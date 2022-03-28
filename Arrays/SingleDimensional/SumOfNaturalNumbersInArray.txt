@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace SumOfNaturalNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int count = 0;
+
+            Console.Write("Enter range: ");
+            int range = int.Parse(Console.ReadLine());
+
+            Console.WriteLine("Enter your numbers: ");
+
+            int[] arr = new int[range];
+
+            for (int i = 0; i < range; i++)
+            {
+                arr[i] = int.Parse(Console.ReadLine());
+                count += arr[i];
+            }
+            Console.WriteLine("Sum of these value is: "+count);
+            Console.ReadLine();
+        }
+    }
+}

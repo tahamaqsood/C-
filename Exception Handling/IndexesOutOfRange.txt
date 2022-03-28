@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            
+
+            try
+            {
+                int[] std_id = new int[5];
+
+                std_id[0] = 11;
+                std_id[1] = 22;
+                std_id[2] = 33;
+                std_id[3] = 44;
+                std_id[4] = 55;
+                std_id[5] = 66;
+                std_id[6] = 77;
+                std_id[7] = 88;
+                Console.WriteLine(std_id[6]);
+            }
+            catch (Exception ex)
+            {
+                Console.WriteLine("Out of range ja rahe hain indexes"); /*For showing our hard coded error*/
+                Console.WriteLine("\n"+ex); /*For showing actual error*/
+                
+            }
+            Console.ReadLine();
+
+        }
+    }
+}

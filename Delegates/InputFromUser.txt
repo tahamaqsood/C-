@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegates
+{
+    class Calculation
+    {
+        public delegate int Cal(int no1, int no2);
+        static int add(int num1, int num2)
+        {
+            return (num1 + num2);
+        }
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter Value 1: ");
+            int val1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter Value 2: ");
+            int val2 = int.Parse(Console.ReadLine());
+
+            //Now we will make object of Delegate.
+            Cal obj = new Cal(add);
+            //Printing... 
+            Console.WriteLine("Answer is: "+obj(val1,val2));
+            Console.ReadLine();
+                  
+        }       
+    }
+}

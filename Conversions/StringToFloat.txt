@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TypeCasting
+{ 
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            string MyString = "29.01";
+            float MyFloat;
+
+            //Conversion...
+            //Convert from String to Float...
+            MyFloat = float.Parse(MyString);
+
+            Console.WriteLine("String value is: "+MyString);
+            Console.WriteLine("After Type Casting, Float value is also: "+MyFloat);
+            Console.ReadLine();
+            
+        }    
+    }
+}

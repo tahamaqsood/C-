@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication27
+{   
+    public class myclass
+    {
+        public void addition(int a , int b)
+        {
+            int result = a + b;
+            Console.WriteLine("Answer is "+result);
+            Console.ReadLine();
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            myclass obj = new myclass();          
+            obj.addition(5,7);
+        }
+    }
+}

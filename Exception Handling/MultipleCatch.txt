@@ -1,0 +1,44 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int[] std_id = new int[4];
+                std_id[0] = 11;
+                std_id[1] = 22;
+                std_id[2] = 33;
+                std_id[3] = 44;
+                Console.WriteLine(std_id[8]);
+            }
+
+            //Jis se error match hoga uska message show krdega:
+
+            catch(NullReferenceException n)
+            {
+                Console.WriteLine(n.Message);
+            }
+
+
+            catch(DivideByZeroException z)
+            {
+                Console.WriteLine(z.Message);
+            }
+
+            catch(Exception ex)
+            {
+                Console.WriteLine(ex.Message);
+            }
+            Console.ReadLine();
+
+        }
+    }
+}

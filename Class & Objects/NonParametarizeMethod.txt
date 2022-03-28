@@ -1,0 +1,88 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication27
+{   
+    //Making Class named as "Calculator"
+    public class Calculator
+    {
+        public int value1;
+        public int value2;
+        public int result;
+
+        //Method for Addition//
+        public void Add()
+        {
+            result = value1 + value2;
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+
+        //Method for Subtraction//
+        public void Subtract()
+        {
+            result = value1 - value2;
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+
+        //Method for Multiplication//
+        public void Mult()
+        {
+            result = value1 * value2;
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+
+        //Method for Division//
+        public void Div()
+        {
+            result = value1 / value2;
+            Console.WriteLine(result);
+            Console.ReadLine();
+        }
+    }
+        
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Making Object to access class variables through reference name of abject "obj" //
+            Calculator obj = new Calculator();
+            obj.value1 = 40;
+            obj.value2 = 60;    
+                 
+            //Calling methods to perfrom their operations//
+            obj.Add();
+            obj.Subtract();
+            obj.Mult();
+            obj.Div();
+
+            //Making another object named as "objTwo" //
+            Calculator objTwo = new Calculator();
+            objTwo.value1 = 39;
+            objTwo.value2 = 88;
+
+            //Calling methods to perfrom their operations//
+            objTwo.Add();
+            objTwo.Subtract();
+            objTwo.Mult();
+            objTwo.Div();
+
+            //Making another object named as "objThree" //
+            Calculator objThree = new Calculator();
+            objThree.value1 = 101;
+            objThree.value2 = 54;
+
+            //Calling methods to perfrom their operations//
+            objThree.Add();
+            objThree.Subtract();
+            objThree.Mult();
+            objThree.Div();
+
+        }
+    }
+}

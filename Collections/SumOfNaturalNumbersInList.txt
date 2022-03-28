@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace SumOfNaturalNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //List...
+            List<int> obj = new List<int>()
+            {
+
+            };
+            //For range....
+            Console.Write("Enter range: ");
+            int range = int.Parse(Console.ReadLine());
+
+
+            Console.WriteLine("Now Enter your Number of Series....");
+
+            for (int i = 1; i <=range; i++)
+            {
+                //Taking an input from user...
+                obj.Add(int.Parse(Console.ReadLine()));
+            }
+            Console.WriteLine("\n\n"); //For extra space
+            int Sum = obj.Sum(); //Storing Sum method in a variable to display sum of all natural numbers..
+            Console.WriteLine("Sum of all values is: "+Sum);
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,188 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace MarkSheet
+{ 
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            //Code For Mark Sheet//
+            int XmlMarks;
+            int JsonMarks;
+            int AngularJsMarks;
+            int CSharpMarks;
+            int ASPDotNetMarks;
+
+
+            Console.Write("Enter XML Marks: ");
+            XmlMarks = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.Write("Enter JSon Marks: ");
+            JsonMarks = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.Write("Enter Angular JS Marks: ");
+            AngularJsMarks = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.Write("Enter C# Marks: ");
+            CSharpMarks = Convert.ToInt32(Console.ReadLine());
+
+
+            Console.Write("Enter ASP.Net Marks: ");
+            ASPDotNetMarks = Convert.ToInt32(Console.ReadLine());
+
+
+            int TotalMarks = XmlMarks + JsonMarks + AngularJsMarks + CSharpMarks + ASPDotNetMarks;
+
+
+            float Percentage = TotalMarks / 5.0f;
+
+            //Variables For Subject Status//
+            string XMLStatus;  //XML//
+            string JSonStatus;  //Json//
+            string AngularStatus;  //Angular JS//
+            string CSharpStatus;  //C#//
+            string ASPDotNetStatus;  //ASP.Net//
+
+
+            //Condition For XML//
+            if (XmlMarks >= 45)
+            {
+                XMLStatus = "Pass";
+            }
+            else
+            {
+                XMLStatus = "Fail";
+            }
+
+
+            //Condition For JSon//
+            if (JsonMarks >= 45)
+            {
+                JSonStatus = "Pass";
+            }
+            else
+            {
+                JSonStatus = "Fail";
+            }
+
+            //Condition For Angular JS//
+            if (AngularJsMarks >= 45)
+            {
+                AngularStatus = "Pass";
+            }
+            else
+            {
+                AngularStatus = "Fail";
+            }
+
+
+            //Condition For C#//
+            if (CSharpMarks >= 45)
+            {
+                CSharpStatus = "Pass";
+            }
+            else
+            {
+                CSharpStatus = "Fail";
+            }
+
+
+            //Condition For ASP.Net//
+            if (ASPDotNetMarks >= 45)
+            {
+                ASPDotNetStatus = "Pass";
+            }
+            else
+            {
+                ASPDotNetStatus = "Fail";
+            }
+            Console.WriteLine("==========================================================");
+            Console.WriteLine("E X A M I N A T I O N  F O R  S E C O N D  S E M E S T E R");
+            Console.WriteLine("==========================================================");
+
+
+            Console.WriteLine("\n==========================================================");
+            Console.WriteLine("A P T E C H   U N I V E R S I T Y   R O A D   C E N T E R");
+            Console.WriteLine("==========================================================");
+
+            //Student Info//
+            Console.WriteLine("\nStudent Name: Usman Hameed");
+            Console.WriteLine("--------------------------");
+
+            Console.WriteLine("\nStudent Batch: Prime-2007B");
+            Console.WriteLine("--------------------------");
+
+
+
+
+            Console.WriteLine("\n==========================================================");
+            Console.WriteLine(" Subject        Max Marks      Obtain Marks      Status");
+            Console.WriteLine("==========================================================");
+
+            Console.WriteLine(" XML             100              " + XmlMarks + "             " + XMLStatus);
+
+            Console.WriteLine(" JSon            100              " + JsonMarks + "             " + JSonStatus);
+
+            Console.WriteLine(" Angular JS      100              " + AngularJsMarks + "             " + AngularStatus);
+
+            Console.WriteLine(" C#              100              " + CSharpMarks + "             " + CSharpStatus);
+
+            Console.WriteLine(" ASP.Net         100              " + ASPDotNetMarks + "             " + ASPDotNetStatus);
+
+
+            Console.WriteLine("==========================================================");
+            Console.WriteLine("\nTotal Mark : " + TotalMarks + "\n\nPercentage : " + Percentage + "%");
+
+
+
+
+
+            //Condition For Grades & Remarks//
+            if (Percentage == 50 || Percentage <= 59)
+            {
+                Console.WriteLine("\nGrade : C");
+                Console.WriteLine("\nRemarks  : You really need to work hard in order to improve your performance");
+            }
+            else if (Percentage == 60 || Percentage <= 69)
+            {
+                Console.WriteLine("\nGrade : B");
+                Console.WriteLine("\nRemarks : Better..! but seems eager to improve");
+            }
+            else if (Percentage == 70 || Percentage <= 79)
+            {
+                Console.WriteLine("\nGrade : A");
+                Console.WriteLine("\nRemarks : Great.!! Keep it up");
+            }
+            else if (Percentage == 80 || Percentage <= 100)
+            {
+                Console.WriteLine("\nGrade : A+");
+                Console.WriteLine("\nRemarks : Flawless Performance");
+            }
+            else
+            {
+                Console.WriteLine("\nGrade : F");
+                Console.WriteLine("\nRemarks : Very Poor perfrmance.!!");
+            }
+
+            Console.WriteLine("\n==========================================================");
+
+            Console.WriteLine("Teacher :    Sir Hamza                       12|March|2021");
+            Console.WriteLine("Admin :      Rutaba                      Aptech Management");
+
+            Console.WriteLine("==========================================================");
+
+
+
+            Console.ReadLine();
+
+        }
+    }
+}

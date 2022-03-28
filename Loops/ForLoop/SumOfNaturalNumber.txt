@@ -1,0 +1,36 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace SumOfNaturalNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Taking Natural Number from User....
+            Console.Write("Enter any natural number: ");
+            int number = int.Parse(Console.ReadLine());
+            //Suppose User Enters 5 as an input...
+
+            //Count variable for counting numbers from 1 to 5 (for loop)
+            int count, sum = 0;
+
+            for (count = 1; count <=number; count++)
+            {          
+                sum = sum + count;
+              //sum =  0  +   1    =    1;    ====> Loop executes 1st time
+              //sum =  1  +   2    =    3;    ====> Loop executes 2nd time
+              //sum =  3  +   3    =    6;    ====> Loop executes 3rd time
+              //sum =  6  +   4    =    10;   ====> Loop executes 4th time
+              //sum =  10 +   5    =    15;   ====> Loop executes 5th time
+            }
+
+            //Printing....
+            Console.WriteLine("Sum of "+number+" is "+sum);
+            Console.ReadLine();
+        }
+    }
+}

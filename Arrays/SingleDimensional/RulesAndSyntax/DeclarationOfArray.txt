@@ -1,0 +1,57 @@
+//Array declaration without using new keyword//
+
+
+            int[] std_id;
+//____________XXXXXXX____________//
+
+
+
+
+
+//Array declaration by using new keword [With range]//
+
+
+            int[] user_id = new int[5];
+
+
+            //Now, initializing array:
+            user_id[0] = 11;
+            user_id[1] = 12;
+            user_id[2] = 13;
+            user_id[3] = 14;
+            user_id[4] = 15;
+
+
+            //Printing
+            Console.WriteLine(user_id[0]); //Output will be shown as 11
+            Console.WriteLine(user_id[1]); //Output will be shown as 12
+            Console.WriteLine(user_id[2]); //Output will be shown as 13
+            Console.WriteLine(user_id[3]); //Output will be shown as 14
+            Console.WriteLine(user_id[4]); //Output will be shown as 15
+            Console.ReadLine();
+//____________XXXXXXX____________//
+
+
+
+
+
+//Array declaration by using new keyword [Without range] = Infinite Range//
+
+
+            int[] admin_id = new int[] { };
+
+
+            //Now, initializing array:
+            admin_id[0] = 31;
+            admin_id[1] = 32;
+            admin_id[2] = 33;
+            admin_id[3] = 34;
+
+
+            //Printing
+            Console.WriteLine(admin_id[0]); //Output will be shown as 31
+            Console.WriteLine(admin_id[1]); //Output will be shown as 32
+            Console.WriteLine(admin_id[2]); //Output will be shown as 33
+            Console.WriteLine(admin_id[3]); //Output will be shown as 34
+            Console.ReadLine();
+//____________XXXXXXX____________//

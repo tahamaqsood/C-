@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                int num1 = 5;
+                int num2 = 0;
+
+                int result = num1 / num2;
+                Console.WriteLine("Answer is: "+result);
+            }
+
+            //Jis se error match hoga uska message show krdega:
+
+            catch(NullReferenceException n)
+            {
+                Console.WriteLine("Value null hai");
+            }
+
+
+            catch(DivideByZeroException z)
+            {
+                Console.WriteLine("Zero se divide nhi hoga");
+            }
+
+            Console.ReadLine();
+
+        }
+    }
+}

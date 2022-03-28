@@ -1,0 +1,91 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //  W I T H O U T    U S I N G    N E W    K E Y W O R D  //
+
+
+            //Declaration:
+            int[] std_id;
+            //____________XXXXXXX____________//
+
+
+
+
+            //Declaration-With-Initialization:
+            int[] std_roll_no = { 91, 92, 93, 94, 95 };
+            //Printing:
+            Console.WriteLine(std_roll_no[0]); //Output will be shown as 91
+            Console.WriteLine(std_roll_no[1]); //Output will be shown as 92
+            Console.WriteLine(std_roll_no[2]); //Output will be shown as 93
+            Console.WriteLine(std_roll_no[3]); //Output will be shown as 94
+            Console.WriteLine(std_roll_no[4]); //Output will be shown as 95
+            Console.ReadLine();
+            //____________XXXXXXX____________//
+
+
+
+
+            //  B Y    U S I N G    N E W    K E Y W O R D  //
+
+
+            //Declaration:[With range]
+            int[] user_id = new int[5];
+            //____________XXXXXXX____________//
+
+
+
+
+            //Declaraton:[Without Range] = Infinite Range
+            int[] admin_id = new int[] { };    
+            //____________XXXXXXX____________//
+
+
+
+
+            //Declaration-With-Initialization:[With Range]
+            int[] moderator_id = new int[4] { 71, 72, 73, 74 };
+
+
+            //Printing:
+            Console.WriteLine(moderator_id[0]); //Output will be shown as 71
+            Console.WriteLine(moderator_id[1]); //Output will be shown as 72
+            Console.WriteLine(moderator_id[2]); //Output will be shown as 73
+            Console.WriteLine(moderator_id[3]); //Output will be shown as 74
+            Console.ReadLine();
+            //____________XXXXXXX____________//
+
+
+
+
+            //Declaration-With-Initialization:[Without Range] = Infinite Range
+            int[] teacher_id = new int[] { 61, 62, 63, 64, 65, 66, 67, 68, 69 };
+
+
+            //Printing:
+            Console.WriteLine(teacher_id[0]); //Output will be shown as 61
+            Console.WriteLine(teacher_id[1]); //Output will be shown as 62
+            Console.WriteLine(teacher_id[2]); //Output will be shown as 63
+            Console.WriteLine(teacher_id[3]); //Output will be shown as 64
+            Console.WriteLine(teacher_id[4]); //Output will be shown as 65
+            Console.WriteLine(teacher_id[5]); //Output will be shown as 66
+            Console.WriteLine(teacher_id[6]); //Output will be shown as 67
+            Console.WriteLine(teacher_id[7]); //Output will be shown as 68
+            Console.WriteLine(teacher_id[8]); //Output will be shown as 69
+            Console.ReadLine();
+            //____________XXXXXXX____________//
+
+
+
+
+        }
+    }
+}

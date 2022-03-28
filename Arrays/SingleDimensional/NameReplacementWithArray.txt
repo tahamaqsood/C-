@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication29
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[] std_id = new int[5] { 91, 92, 93, 94, 95 };
+            string[] std_name = new string[5] { "Ali", "Raheel", "Bilal", "Usman", "Talha" };
+            for (int i = 0; i < 5; i++)
+            {
+                Console.WriteLine(std_id[i]+" "+std_name[i]);
+            }
+
+            Console.Write("Enter id to replace name with: ");
+            int ReplaceId = int.Parse(Console.ReadLine());
+            Console.Write("Enter your new name: ");
+            string ReplaceName = Console.ReadLine();
+
+            for (int i = 0; i < 5; i++)
+            {
+                if (ReplaceId==std_id[i])
+                {
+                    ReplaceName = std_name[i].Replace(std_name[i], ReplaceName);
+                    Console.WriteLine(std_id[i]+" "+ReplaceName);                  
+                }
+                else
+                {
+                    Console.WriteLine(std_id[i] + " " + std_name[i]);
+                }
+            }
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,30 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice4
+{  
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.Write("Which Table you want to display: ");
+            int Table = int.Parse(Console.ReadLine());
+
+            Console.Write("Enter Starting Point: ");
+            int sp = int.Parse(Console.ReadLine());    //sp = Starting Point...
+
+            Console.WriteLine("Enter Ending Point: ");
+            int ep = int.Parse(Console.ReadLine());    //ep = Ending Point...
+
+            do
+            {
+                Console.WriteLine(Table+"x"+sp+"="+Table*sp);
+                sp++;
+            } while (sp<=ep);
+            Console.ReadLine();
+        }
+    }
+}

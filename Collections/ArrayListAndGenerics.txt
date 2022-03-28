@@ -1,0 +1,48 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace Generics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //For Generics...(Dictionary is a class of Generics)
+            Console.WriteLine("F O R   G E N E R I C S");
+            Dictionary<int, string> obj = new Dictionary<int, string>();
+            obj.Add(2017, "Usman");
+            obj.Add(2019, "Ali");
+            obj.Add(2020, "Hira");
+            obj.Add(2021, "Rida");
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n\n"); //For three lines space
+
+            //For Array List
+            Console.WriteLine("F O R   A R R A Y   L I S T");
+            ArrayList ArrayObj = new ArrayList();
+            ArrayObj.Add("Saad");
+            ArrayObj.Add(25);
+            ArrayObj.Add(2000);
+            foreach (var item in ArrayObj)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n\n"); //For three lines space
+
+            //For Printing each value thorugh their index numbers
+            Console.WriteLine("P R I N T I N G   T H R O U G H   I N D E X   N U M B E R S");
+            Console.WriteLine("Name is: "+ArrayObj[0]+" Age is: "+ArrayObj[1]+" Salary is: "+ArrayObj[2]);   
+
+            Console.ReadLine();                        
+        }       
+    }
+}

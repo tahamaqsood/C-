@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication12
+{
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter indexes (Must be more than 1): ");
+            int indexes = Convert.ToInt32(Console.ReadLine());
+
+            int[] RollNo = new int[indexes];
+            Console.WriteLine("=====================");
+            string[] StudentName = new string[indexes];
+            Console.WriteLine("=====================");
+
+
+            for (int i = 1; i <indexes;i++)
+            {
+                Console.Write(i+ " Enter your Roll no: ");
+                RollNo[i] = Convert.ToInt32(Console.ReadLine());
+                Console.Write(i+ " Enter your name: ");
+                StudentName[i] = Console.ReadLine();
+                Console.WriteLine("=====================");
+                Console.WriteLine("=====================");
+
+            }
+            for (int i = 1; i < indexes; i++)
+            {
+                Console.WriteLine(i+ " Roll No is: " +RollNo[i]);
+                Console.WriteLine(i+ " Name is: " +StudentName[i]);
+                Console.WriteLine();     
+            }
+            Console.WriteLine("_______XXXXXXX_______");
+            Console.ReadLine();
+        }
+    }
+}

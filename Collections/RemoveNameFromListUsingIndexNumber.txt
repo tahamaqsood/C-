@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace removelist
+{  
+    public class Demo
+    {
+        public void Display()
+        {
+            //ArrayList...
+            ArrayList obj = new ArrayList();
+            //For Range....
+            Console.Write("Enter range: ");
+            int range = Convert.ToInt32(Console.ReadLine());
+            //Taking names from user as an input....
+            for (int i = 0; i < range; i++)
+            {
+                obj.Add(Console.ReadLine());
+            }
+            //Asking for index number to remove specific name....
+            Console.Write("Enter index number to remove name: ");
+            obj.RemoveAt(Convert.ToInt32(Console.ReadLine()));
+            //Final Printing...
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Demo d = new Demo();
+            d.Display();
+            Console.ReadLine();
+        }
+    }
+}

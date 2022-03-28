@@ -1,0 +1,80 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Inheritance//
+
+    //Class for Addition
+    public class Addition
+    {
+        //These variables will be passed as parameters after making an object 
+        public int value1, value2;
+        public void add(int num1, int num2)
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 + num2;
+            Console.WriteLine("Answer is: "+result);
+        }
+    }
+    //Class for Subtraction
+    public class Subtraction: Addition //Inherited with addition
+    {
+        public void sub(int num1, int num2)
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 - num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Multiplication
+    public class Multiplication: Subtraction //Inherited with subtraction
+    {
+        public void mult(int num1, int num2)
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 * num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Division
+    public class Division : Multiplication //Inherited with Multiplication
+    {
+        public void div(int num1, int num2)
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Now , we wil make object of Division as it can access all methods and variables
+            Division obj = new Division();
+
+            //Class variables passed as parameters
+            obj.add(obj.value1,obj.value2);
+            obj.sub(obj.value1, obj.value2);
+            obj.mult(obj.value1, obj.value2);
+            obj.div(obj.value1, obj.value2);         
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Conversions
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Explicit Conversion (Big Datatype convert into small data type)
+            float MyFloat = 100.09f;
+            int MyInt;
+
+            //Conversion
+            MyInt = (int)MyFloat; //Forcefully conversion although it will lose actual data or value
+
+            Console.WriteLine("Value of MyInt is: "+MyInt);
+
+            Console.ReadLine();
+
+
+        }
+    }
+}

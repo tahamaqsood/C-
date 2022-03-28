@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication17
+{
+    public interface A
+    {
+        void eat();
+        void code();
+    }
+
+    public interface B:A
+    {
+        void sleep();
+        void workout();
+    }
+
+    public class Human:B
+    {
+        public void eat()
+        {
+            Console.WriteLine("Eating");
+        }
+        public void code()
+        {
+            Console.WriteLine("Coding");
+        }
+        public void sleep()
+        {
+            Console.WriteLine("Sleeping");
+        }
+        public void workout()
+        {
+            Console.WriteLine("Gyming");
+        }
+    }
+    public class anotherhuman:B
+    {
+        public void eat()
+        {
+            Console.WriteLine("Anothe human is Eating");
+        }
+        public void code()
+        {
+            Console.WriteLine("Anothe human is Coding");
+        }
+        public void sleep()
+        {
+            Console.WriteLine("Anothe human is Sleeping");
+        }
+        public void workout()
+        {
+            Console.WriteLine("Anothe human is Gyming");
+        }
+    }
+
+
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            B s;
+            s = new Human();
+            s.eat();
+            s.code();
+            s.workout();
+            s.sleep();
+
+            Console.WriteLine("\n");
+            s = new anotherhuman();
+            s.code();
+            s.eat();
+            s.workout();
+            s.sleep();
+           
+            Console.ReadLine();
+
+        }
+    }
+}

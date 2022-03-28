@@ -1,0 +1,77 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Making calculator through Parametarized function
+    public class Calculator
+    {
+        //These variables of calculator class will be passed as parameters after making object
+        public int value1;
+        public int value2;
+        //Method for Addition
+        public void add(int a , int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a + b;
+            Console.WriteLine("Answer is: "+result);
+        }
+        //Method for Subtraction
+        public void sub(int a , int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a - b;
+            Console.WriteLine("Answer is: " + result);
+        }
+        //Method for Multiplication
+        public void mult(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a * b;
+            Console.WriteLine("Answer is: " + result);
+        }
+        //Method for Division
+        public void div(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a / b;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Making an object of calculator class to call methods
+            Calculator obj = new Calculator();
+
+            //Passing variables as parameters//
+            //Functions k variables yahan pass nhi ho skte thay 
+            //is liye class k ander bhi variables banae...
+            //Ta k  "obj.add()" k ander parameters pass kr saken 
+            obj.add(obj.value1, obj.value2);
+
+            obj.sub(obj.value1,obj.value2);
+
+            obj.mult(obj.value1, obj.value2);
+
+            obj.div(obj.value1, obj.value2);
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication15
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int[,] rollno = new int[3,3];
+            string[,] name = new string[3, 3];
+
+            for (int i = 0; i < 3; i++)
+            {
+                Console.Write("Enter Roll no: ");
+                rollno[i, i] = Convert.ToInt32(Console.ReadLine());
+
+                Console.Write("Enter name: ");
+                name[i, i] = Console.ReadLine();
+                Console.WriteLine();
+            }
+            Console.WriteLine();
+
+            for (int p = 0; p < 3; p++)
+            {
+                Console.WriteLine("Roll no is: "+rollno[p,p]);
+                Console.WriteLine("Name is: "+name[p,p]);
+            }
+
+           
+           
+            Console.ReadLine();
+
+        }
+    }
+}

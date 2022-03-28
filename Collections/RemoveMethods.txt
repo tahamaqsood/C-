@@ -1,0 +1,27 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var numbers = new List<int>()
+            {
+                10,20,30,40,50,60,70,80,90,100
+            };
+            numbers.Remove(50); //50 will be removed as Remove method targets actual value
+            numbers.RemoveAt(2);// 30 will be removed as RemoveAt method targets index number
+            
+            foreach (var item in numbers)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}

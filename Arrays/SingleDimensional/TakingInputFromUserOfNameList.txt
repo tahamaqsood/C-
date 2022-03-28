@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+             Console.WriteLine("Enter 5 names: ");
+             string[] name = new string[5];
+             name[0] = Console.ReadLine();
+             name[1] = Console.ReadLine();
+             name[2] = Console.ReadLine();
+             name[3] = Console.ReadLine();
+             name[4] = Console.ReadLine();
+            if (name[0]=="Usman"&&name[1]=="Raheel"&&name[2]=="Bilal"&&name[3]=="Saad"&&name[4]=="Zain")
+            {
+                Console.WriteLine("Correct Names");
+            }
+            else
+            {
+                Console.WriteLine("Incorrect");
+            }   
+            Console.ReadLine();	             
+        }
+    }
+}

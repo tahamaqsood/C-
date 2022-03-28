@@ -1,0 +1,28 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TypeCasting
+{ 
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            float f = 29.015f;
+            string s;
+
+            //Conversion Float to String
+            //Multiple techniques to Convert Float into String
+
+            s = f.ToString();         //Technique:1
+            s = Convert.ToString(f);  //Technique:2
+
+            Console.WriteLine(s);
+            Console.ReadLine();
+            
+        }    
+    }
+}

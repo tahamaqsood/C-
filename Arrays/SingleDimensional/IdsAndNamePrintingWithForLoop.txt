@@ -1,0 +1,43 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+           //Array Declaration
+            int[] std_id = new int[6];
+
+           //Array Initialization
+            std_id[0] = 91;
+            std_id[1] = 92;
+            std_id[2] = 93;
+            std_id[3] = 94;
+            std_id[4] = 95;
+            std_id[5] = 96;
+
+            //Array Declaration
+            string[] std_name = new string[6];
+
+            //Array Initialization
+            std_name[0] = "Usman";
+            std_name[1] = "Raheel";
+            std_name[2] = "Shahzaib";
+            std_name[3] = "Bilal";
+            std_name[4] = "Saad";
+            std_name[5] = "Zain";
+
+            //For Loop//
+            for (int i = 0; i<std_id.Length;i++)
+            {
+                Console.WriteLine(std_id[i]+" "+std_name[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,32 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ReversePyramid
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows;
+            int spaces;
+            int pyramids;
+
+            for(rows = 1; rows<=21; rows++)
+            {
+                for(spaces = 2; spaces<=rows;spaces++)
+                {
+                    Console.Write(" ");
+                }
+                for(pyramids = 2*rows-1; pyramids <=;pyramids++)
+                {
+                    Console.Write("^");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}

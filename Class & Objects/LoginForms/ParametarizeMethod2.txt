@@ -1,0 +1,38 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication1
+{
+    class log
+    {
+       
+        public void login(string Username,string Password)
+        {
+            Console.WriteLine("Enter user name: ");
+            Username = Console.ReadLine();
+            Console.WriteLine("Enter password: ");
+            Password = Console.ReadLine();
+
+            if (Username=="Usman Hameed" && Password=="Gray Hat")
+            {
+                Console.WriteLine("Login Successful...!");
+            }
+            else
+            {
+                Console.WriteLine("Login Failed...!");
+            }
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            log obj = new log();
+            obj.login("Pass any value here in string format","doesnt effect your code");
+            Console.ReadLine();
+        }
+    }
+}

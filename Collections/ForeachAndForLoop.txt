@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace ArrayClass
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ArrayList obj = new ArrayList();
+            obj.Add("Usman"); //String Value
+            obj.Add("Rizwan");//String Value 
+            obj.Add('$');  //Character Value
+            obj.Add(24);     //Integer Value
+            obj.Add(2500.000f);//Float Value
+            obj.Add(91000.00d);//Double Value
+
+
+            //For Each Loop..
+            Console.WriteLine("Foreach Loop");
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n\n"); //For Space
+
+            //For Loop..
+            Console.WriteLine("For Loop");
+            for (int i = 0; i < 4; i++)
+            {
+                Console.WriteLine(obj[i]);
+            }
+            Console.ReadLine();
+        }
+    }
+}

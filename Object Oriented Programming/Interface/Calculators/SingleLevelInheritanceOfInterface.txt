@@ -1,0 +1,89 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication22
+{
+    //Interface can't inherit a class, but class can inherit an interface
+
+    //Interface:1
+    public interface Addition
+    {
+        void add(); //Method:1
+    }
+    //Interface:2
+    public interface Subtraction:Addition
+    {
+        void sub(); //Method:2
+    }
+    //Interface:3
+    public interface Multiplication:Subtraction
+    {
+        void mult(); //Method:3
+    }
+    //Interface:4
+    public interface Division:Multiplication
+      
+    {
+        void div(); //Method:4
+    }
+
+    //Normal class
+    public class Calculator:Division //Now, Implement all methods which division can access
+    {
+        public int num1, num2;
+        public void add() //Method:1
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 + num2;
+            Console.WriteLine("Answer is "+result);
+        }
+
+        public void sub() //Method:2
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 - num2;
+            Console.WriteLine("Answer is " + result);
+        }
+
+        public void mult() //Method:3
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 * num2;
+            Console.WriteLine("Answer is " + result);
+        }
+
+        public void div() //Method:4
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Answer is " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            /*As you know class Calculator inherits Interface Division, which inherit all
+            interfaces and therefore division can access all methods.
+            And thats why we use Division interface name to make instance of Calculator class.*/
+            Calculator obj = new Calculator();
+            obj.add();   obj.sub();   obj.mult();   obj.div();
+            Console.ReadLine();
+        }
+    }
+}

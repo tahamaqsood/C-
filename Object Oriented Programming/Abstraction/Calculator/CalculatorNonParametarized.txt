@@ -1,0 +1,83 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Base Class
+    public abstract class Calculator
+    {
+        //Base method
+        public abstract void computing();
+    }
+    //Class for Addition
+    public class Add : Calculator //Inherited from base class
+    {
+        public int num1, num2;
+        public override void computing()
+        {
+            Console.WriteLine("Enter value: 1");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value: 2");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 + num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Subtraction
+    public class Sub : Calculator //Inherited from base class
+    {
+        public int num1, num2;
+        public override void computing()
+        {
+            Console.WriteLine("Enter value: 1");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value: 2");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 - num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Multiplication
+    public class mult : Calculator //Inherited from base class
+    {
+        public int num1, num2;
+        public override void computing()
+        {
+            Console.WriteLine("Enter value: 1");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value: 2");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 * num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Division
+    public class div : Calculator //Inherited from base class
+    {
+        public int num1, num2;
+        public override void computing()
+        {
+            Console.WriteLine("Enter value: 1");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value: 2");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Calculator c;
+            c = new Add(); c.computing();
+            c = new Sub(); c.computing();
+            c = new mult(); c.computing();
+            c = new div(); c.computing();
+            Console.ReadLine();
+        }
+    }
+}

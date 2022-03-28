@@ -1,0 +1,66 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication4
+{
+    //Polymorphism
+    //Method Over loading
+    public class LoginForm
+    {
+        public string adname = "Meesum";
+        public string adpassword = "Aptech";
+        public string uname = "Usman";
+        public string upassword = "Gray Hat";
+        public int ucontact = 01234567;
+
+        public void login(string adminname, string adminpassword)
+        {
+            Console.BackgroundColor = ConsoleColor.DarkCyan; Console.WriteLine(">>> ADMIN LOGIN FORM <<<");
+            Console.BackgroundColor = ConsoleColor.Black; Console.Write("Enter Admin Name: ");
+            adminname = Console.ReadLine();
+            Console.Write("Enter Admin Password: ");
+            adminpassword = Console.ReadLine();
+            if (adminname == adname && adminpassword == adpassword)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkGray; Console.WriteLine("Login Successful....!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("Login Failed...!!");
+            }
+        }
+        public void login(string username, string userpassword, int usercontact)
+        {
+            Console.BackgroundColor = ConsoleColor.DarkCyan; Console.WriteLine("\n>>> USER LOGIN FORM <<<");
+            Console.BackgroundColor = ConsoleColor.Black; Console.Write("Enter user name: ");
+            username = Console.ReadLine();
+            Console.Write("Enter user password: ");
+            userpassword = Console.ReadLine();
+            Console.Write("Enter user contact: ");
+            usercontact = Convert.ToInt32(Console.ReadLine());
+            if (username == uname && userpassword == upassword && usercontact == ucontact)
+            {
+                Console.BackgroundColor = ConsoleColor.DarkGray; Console.WriteLine("Login Successful...!");
+            }
+            else
+            {
+                Console.BackgroundColor = ConsoleColor.Red; Console.WriteLine("Login Failed....!");
+            }
+        }
+
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            LoginForm obj = new LoginForm();
+            obj.login("Meesum", "Aptech");
+            obj.login("Usman", "Gray Hat", 0123456789);
+            Console.ReadLine();
+
+        }
+    }
+}

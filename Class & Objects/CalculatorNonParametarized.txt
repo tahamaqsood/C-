@@ -1,0 +1,65 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Making Calculator through functions (Using only one class)
+    public class calculator
+    {
+        int num1, num2;
+        //Method for Addition
+        public void add()
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 + num2;
+            Console.WriteLine("Answer is " + result);
+        }
+        //Method for Subtraction
+        public void sub()
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 - num2;
+            Console.WriteLine("Answer is " + result);
+        }
+        //Method for Multiplication
+        public void mult()
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 * num2;
+            Console.WriteLine("Answer is " + result);
+        }
+        //Method for Division
+        public void div()
+        {
+            Console.WriteLine("Enter value 1: ");
+            num1 = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            num2 = int.Parse(Console.ReadLine());
+            int result = num1 / num2;
+            Console.WriteLine("Answer is " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Making object to call methods
+            calculator obj = new calculator();
+            //Calling methods through instance/reference name
+            obj.add(); obj.sub(); obj.mult(); obj.div();
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication16
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine("Enter value '30' , '31' ,'28' or '29; to get list of months");
+
+            int month = Convert.ToInt32(Console.ReadLine());
+
+            if(month==31)
+            {
+                Console.WriteLine("List of months which contain 30 days are: " + "\nJanuary"+"\nMarch"+"\nMay"+"\nJuly"+"\nAugust"+"\nOctober"+"\nDecember");
+            }
+            else if (month == 28 || month == 29)
+            {
+                Console.WriteLine("Only February contains 28 or 29 days");
+            }
+            else if(month == 30)
+            {
+                Console.WriteLine("List of months which contain 30 days are: "+"\nApril"+"\nJune"+"\nSeptember"+"\nNovember");
+            }
+            Console.ReadLine();
+
+        }
+    }
+}

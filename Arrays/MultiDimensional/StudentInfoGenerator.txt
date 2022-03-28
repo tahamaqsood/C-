@@ -1,0 +1,40 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+
+
+            
+            Console.WriteLine("How many indexes you want? ");
+            int indexes = Convert.ToInt32(Console.ReadLine()); //Range
+
+            int[,] std_id = new int[indexes, indexes];
+            string[,] std_name = new string[indexes, indexes];
+
+            for(int i = 0; i<indexes;i++)
+            {
+                Console.Write("Enter your roll no: ");
+                std_id[i, i] = int.Parse(Console.ReadLine());
+
+                Console.WriteLine("Enter your name: ");
+                std_name[i, i] = Console.ReadLine();           
+            }
+            //Printing loop
+            for (int p = 0; p < indexes; p++)
+            {
+                Console.WriteLine("Roll no is: " + std_id[p, p]);
+                Console.WriteLine("Name is: " + std_name[p, p]);
+            }
+
+            Console.ReadLine();
+        }
+    }
+}

@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+namespace removelist
+{  
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string MyString = "31";
+            int MyInt;
+
+            //Multiple Techniques to Convert String into Integer...
+            //Technique:1 MyInt = Convert.ToInt32(MyString);
+            //Technique:2 MyInt = int.Parse(MyString);
+            /*You can use any of it. Both are correct*/
+
+            //Using Technique:1
+            MyInt = Convert.ToInt32(MyString);
+
+            //Using Technique:2
+            MyInt = int.Parse(MyString);
+
+            Console.WriteLine("Value of MyInt is: " + MyInt);
+            Console.WriteLine("After Type Casting, Value of MyString is also: " + MyString);
+            Console.ReadLine();
+        }
+    }
+}

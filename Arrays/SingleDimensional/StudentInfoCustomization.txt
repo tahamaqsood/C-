@@ -1,0 +1,18 @@
+            Console.WriteLine("How many indexes you want");
+/*range*/   int index = Convert.ToInt32(Console.ReadLine());
+
+            int[] std_id = new int[index];
+            string[] std_name = new string[index];
+            for (int i = 1; i < index; i++)
+            {
+                Console.Write("Enter Your id: " + i + "\t");
+                std_id[i] = Convert.ToInt32(Console.ReadLine());
+                Console.Write("Enter Your name: " + i + "\t");
+                std_name[i] = Console.ReadLine();
+                Console.WriteLine("\n");
+            }
+            for (int i = 1; i < std_id.Length; i++)
+            {
+                Console.WriteLine("Id is: " + std_id[i]);
+                Console.WriteLine("Name is: " + std_name[i]);
+            }

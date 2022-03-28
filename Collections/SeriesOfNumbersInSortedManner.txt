@@ -1,0 +1,41 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace SumOfNaturalNumbers
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Series Of Numbers in unsorted manner...
+            Console.WriteLine("Series of numbers:\n");
+
+            var obj = new List<int>()
+            {
+                5,6,3,1,22,9,11,7
+            };
+
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+             
+
+
+            //Series Of Numbers in a Sorted manner....
+            Console.WriteLine("\n\nSorted Series of numbers\n");
+            obj.Sort();
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            
+            Console.ReadLine();
+
+        }
+    }
+}

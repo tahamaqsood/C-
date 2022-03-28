@@ -1,0 +1,71 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Dictionary is a generic class which can contain different data types at once..
+            //Also it helps you to find values through "Key/Value properties"
+
+            //Syntax
+            //Dictionary<Key,Value> obj = new Dictionary<Key Value>(); //obj is just reference name.
+            Dictionary<int, string> obj = new Dictionary<int, string>();
+            obj.Add(2017 ,  "Usman");
+            obj.Add(2019 , "Ali");
+            obj.Add(2020 , "Hira");
+            //      Keys   Values
+
+
+            //New Object (Reference name obj1)
+            Dictionary<string, string> obj1 = new Dictionary<string, string>();
+            obj1.Add("Usman", "Best Programmer");
+            obj1.Add("Saad", "Confused Programmer");
+            obj1.Add("Bilal", "Psycho Programmer");
+            obj1.Add("Ali", "Legendary Programmer");
+            //       Keys        Values
+
+            //Method for removing Usman// obj1.Remove("Usman");
+
+
+            foreach (var item in obj) //Obj
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.WriteLine(); //Extra space
+            Console.WriteLine(); //Extra space
+
+
+            foreach (var item in obj1) //Obj1
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine(); //Extra space
+            Console.WriteLine(); //Extra space
+
+            //For keys and values
+            foreach (var item in obj)
+            {
+                Console.WriteLine("Key is "+item.Key+" Value is "+item.Value);
+            }
+
+            Console.WriteLine(); //Extra space
+            Console.WriteLine(); //Extra space
+
+            //Display Only Values of obj1
+            foreach (var item in obj1.Values)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}

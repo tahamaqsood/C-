@@ -1,0 +1,51 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace Generics
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Console.WriteLine(">>For List<<");
+            //For list
+            var obj = new List<string>()
+            {
+                "Usman","Bilal","Raheel","Talha","Shahzaib","Saad","Zain","Fahad"
+            };
+            obj.Add("Danish");
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+
+            Console.WriteLine("\n\n>>For Array list<<");
+            //For Array list
+            ArrayList obj1 = new ArrayList();
+            obj1.Add("Ali");
+            obj1.Add("Salar");
+            obj1.Add("Hira");
+            foreach (var item in obj1)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n\n>>For Generics<<");
+            //For Generics 
+            Dictionary<int, string> obj2 = new Dictionary<int, string>();
+            obj2.Add(2017, "Usman");
+            obj2.Add(2019, "Ali");
+            obj2.Add(2020, "Hira");
+            foreach (var item in obj2)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }       
+    }
+}

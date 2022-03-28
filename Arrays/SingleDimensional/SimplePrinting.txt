@@ -1,0 +1,31 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication10
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Syntax For Arrays//   
+            //Data type[] ArrayName = new keyword DataType[range] {Values};
+             int[] Student_Id = new int[5] { 91, 92, 93, 94, 95 };//Declaration with initialization
+            //                       0         1      2        3       4
+            string[] Student_Name = new string[5] { "Usman", "Raheel", "Sk", "Bilal", "Saad" };
+            //                         1         2      3        4       5
+
+            Console.Write(Student_Id[2]);
+            Console.Write("\t" + Student_Name[1]);
+
+            Console.WriteLine("\n" + Student_Id[3] + "\t" + Student_Name[3]);
+
+            Console.WriteLine(Student_Id[4] + "\t" + Student_Name[4]);
+
+            Console.ReadLine();
+
+        }
+    }
+}

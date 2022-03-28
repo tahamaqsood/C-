@@ -1,0 +1,39 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace List
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //For string
+            var obj = new List<string>()
+            {
+                "Usman","24","$","Babar","25.00"
+            };
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+
+            Console.WriteLine("\n\n"); //For three lines space
+
+            //For integer
+            var MyObj = new List<int>()
+            {
+                1,2,3,4,11,22,33,44,55
+            };
+            foreach (var item in MyObj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+                   
+        }       
+    }
+}

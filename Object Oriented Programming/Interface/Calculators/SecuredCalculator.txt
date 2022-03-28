@@ -1,0 +1,95 @@
+sing System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication21
+{
+    //Interface
+    public interface Calculator
+    {
+        //Interface method doesn't contain any modifier.
+       void computing(int a, int b);
+    }
+    //Abstract class
+    public abstract class MyCalculator:Calculator //Inherited from interface
+    {
+        //Abstract class variables will be passed as parameters
+        public int num1, num2;
+        public abstract void computing(int a, int b);  
+    }
+    //Class for Addition
+    public class add:MyCalculator //Inherited from abstract class
+    {
+        public override void computing(int a , int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a + b;
+            Console.WriteLine("Answer is: "+result);
+        }
+    }
+    //Class for Subtraction
+    public class sub: MyCalculator //Inherited from abstract class
+    {
+        public override void computing(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a - b;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Multiplication
+    public class mult: MyCalculator //Inherited from abstract class
+    {
+        public override void computing(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a * b;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    //Class for Division
+    public class div: MyCalculator //Inherited from abstract class
+    {
+        public override void computing(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            a = int.Parse(Console.ReadLine());
+            Console.WriteLine("Enter value 2: ");
+            b = int.Parse(Console.ReadLine());
+            int result = a / b;
+            Console.WriteLine("Answer is: " + result);
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            MyCalculator c;
+
+            c = new add();
+            c.computing(c.num1, c.num2); //Passing abstract class variables as parameters
+
+            c = new sub();
+            c.computing(c.num1, c.num2); //Passing abstract class variables as parameters
+
+            c = new mult();
+            c.computing(c.num1, c.num2); //Passing abstract class variables as parameters
+
+            c = new div();
+            c.computing(c.num1, c.num2); //Passing abstract class variables as parameters
+
+            Console.ReadLine();
+        }
+    }
+}

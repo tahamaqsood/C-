@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication18
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            try
+            {
+                string name = null;
+                Console.WriteLine(name.Length);
+            }
+            catch(NullReferenceException n)
+            {
+               Console.WriteLine("Value null hai bhai");/*For showing our hard coded error*/
+               Console.WriteLine(n);/*For showing actual error */
+            }
+            Console.ReadLine();
+        }
+    }
+}

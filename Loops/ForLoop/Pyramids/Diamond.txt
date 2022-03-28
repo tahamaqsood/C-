@@ -1,0 +1,53 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace practice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int rows;
+            int spaces;
+            int pyramid;
+
+            //For number of rows
+            for (rows = 1; rows <= 15; rows++)
+            {
+
+                //For number of spaces
+                for (spaces = rows; spaces <= 14; spaces++)
+                {
+                    Console.Write(" ");
+                }
+
+                //For number of pyramid sign
+                for (pyramid = 1; pyramid <= 2 * rows - 1; pyramid++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            
+            
+            //Merging Cube//
+
+            for (rows = 1; rows <= 15; rows++)
+            {
+                for (spaces = 1; spaces <= rows; spaces++)
+                {
+                    Console.Write(" ");
+                }
+                for (pyramid = 2*rows-1; pyramid <=27; pyramid++)
+                {
+                    Console.Write("*");
+                }
+                Console.WriteLine();
+            }
+            Console.ReadLine();
+        }
+    }
+}

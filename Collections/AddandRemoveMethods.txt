@@ -1,0 +1,60 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+using System.Collections;
+
+namespace AddAndRemoveMethods
+{
+    public class Add
+    {
+
+        public void add()
+        {
+            Console.WriteLine("Enter range: ");
+            int range = int.Parse(Console.ReadLine());
+            string[] records = new string[range];
+
+            for (int i = 0; i < range; i++)
+            {
+                records[i] = Console.ReadLine();
+            }
+
+
+            Console.WriteLine("\n\n");
+
+            ArrayList obj = new ArrayList();
+            for (int i = 0; i < range; i++)
+            {
+                obj.Add(records[i]);    
+            }
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            Console.WriteLine("\n");
+            Console.WriteLine("Enter name to remove name");
+
+            obj.Remove(Console.ReadLine());
+            Console.WriteLine("\n\n");
+            Console.WriteLine("Final posting");
+            foreach (var item in obj)
+            {
+                Console.WriteLine(item);
+            }
+            
+           
+
+        }
+    }
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            Add obj = new Add();
+            obj.add();
+            Console.ReadLine();
+        }
+    }
+}

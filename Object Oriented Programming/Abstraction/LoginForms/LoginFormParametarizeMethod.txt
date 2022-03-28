@@ -1,0 +1,45 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace AbstractionPractice
+{
+    public abstract class LoginForm
+    {
+        public abstract void login(string username, string password);
+    }
+    public class ForUser:LoginForm
+    {
+        public string uname = "Usman Hameed";
+        public string upass = "Gray Hat";
+        public override void login(string username, string password)
+        {
+            Console.WriteLine("Enter Username: ");
+            username = Console.ReadLine();
+            Console.WriteLine("Enter password");
+            password = Console.ReadLine();
+
+            if (username==uname && password==upass)
+            {
+                Console.WriteLine("Login successful");
+            }
+            else
+            {
+                Console.WriteLine("Login Failed");
+            }
+        }
+    }
+   
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            ForUser obj = new ForUser();
+            obj.login("Usman Hameed","Gray Hat");
+            Console.ReadLine();
+
+        }
+    }
+}

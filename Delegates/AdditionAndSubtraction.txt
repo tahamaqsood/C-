@@ -1,0 +1,42 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Delegates
+{
+    
+    class Program
+    {
+        //Delegete will encapsulate static methods
+        public delegate int Calculator(int NumOne, int NumTwo);
+
+        static int Addition(int NumOne,int NumTwo)
+        {
+            return (NumOne + NumTwo);
+        }
+
+        static int Subtraction(int NumOne, int NumTwo)
+        {
+            return (NumOne - NumTwo);
+        }
+
+        static void Main(string[] args)
+        {
+            //Variables for containing values... 
+            int Value1 = 10;
+            int Value2 = 2;
+
+
+            //For Addition (Object Of delegate will take method name as a parameter)
+            Calculator ObjAdd = new Calculator(Addition);
+            Console.WriteLine(ObjAdd(Value1,Value2));
+
+            //For Subtraction (Object Of delegate will take method name as a parameter)
+            Calculator ObjSub = new Calculator(Subtraction);
+            Console.WriteLine(ObjSub(Value1,Value2));
+            Console.ReadLine();
+        }       
+    }
+}

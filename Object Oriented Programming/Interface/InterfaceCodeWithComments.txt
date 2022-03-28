@@ -1,0 +1,58 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Interface
+{
+    class Program
+    {
+        // Use interface keyword in Interface class.....
+        public interface Drawable
+        {
+            // Do not use public in Interface Function
+           void draw();
+        }
+
+        public class Rectangle:Drawable
+        {
+            public void draw()
+            {
+                Console.WriteLine("Rectangle is drawing");
+            }
+        }
+
+
+        public class Circle:Drawable
+        {
+            public void draw()
+            {
+                Console.WriteLine("Circle drawing");
+            }
+        }
+
+
+        public class Triangle:Drawable
+        {
+            public void draw()
+            {
+                Console.WriteLine("Triangle is drawing");
+            }
+        }
+    
+
+        static void Main(string[] args)
+        {
+            Drawable d;
+            d = new Rectangle();
+            d.draw();
+
+            d = new Circle();
+            d.draw();
+
+            d = new Triangle();
+            d.draw();
+        }
+    }
+}

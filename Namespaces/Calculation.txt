@@ -1,0 +1,113 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace Calculator
+{
+    //Addition
+    class addition
+    {
+        public int value1;
+        public int value2;
+        //Parametarize function
+        public void add(int a, int b)
+        {    
+            Console.WriteLine("Enter value 1: ");
+            value1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter value 2: ");
+            value2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = value1 + value2;
+            Console.WriteLine("Answer is: "+result);
+        }
+    }
+    //Subtraction
+    class subtraction
+    {
+        public int value1;
+        public int value2;
+
+        //Parametarize function
+        public void sub(int a, int b)
+        {
+            Console.WriteLine("Enter value 1: ");
+            value1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter value 2: ");
+            value2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = value1 - value2;
+            Console.WriteLine("Result is: "+result);
+        }
+    }
+    //Multiplication
+    class multiplication
+    {
+        public int value1;
+        public int value2;
+
+        //Non parametarize function
+        public void mult()
+        {
+            Console.WriteLine("Enter value 1: ");
+            value1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter value 2: ");
+            value2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = value1 * value2;
+            Console.WriteLine("Result is: " + result);
+        }
+    }
+
+    //Division
+    class division
+    {
+        public int value1;
+        public int value2;
+
+        //Non parametarize function
+        public void div()
+        {
+            Console.WriteLine("Enter value 1: ");
+            value1 = Convert.ToInt32(Console.ReadLine());
+
+            Console.WriteLine("Enter value 2: ");
+            value2 = Convert.ToInt32(Console.ReadLine());
+
+            int result = value1 / value2;
+            Console.WriteLine("Result is: " + result);
+        }
+    }
+}
+
+namespace ConsoleApplication16
+{
+  
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Addition object
+            Calculator.addition obj_Add = new Calculator.addition();
+            obj_Add.add(obj_Add.value1, obj_Add.value2); //Parametarize function
+
+            //Subtraction object
+            Calculator.subtraction obj_Sub = new Calculator.subtraction();
+            obj_Sub.sub(obj_Sub.value1, obj_Sub.value2); //Parametarize function
+
+            //Multiplication object
+            Calculator.multiplication obj_Mult = new Calculator.multiplication();
+            obj_Mult.mult(); //Non parametarize
+
+            //Division object
+            Calculator.division obj_Div = new Calculator.division();
+            obj_Div.div(); //Non parametarize
+
+            Console.ReadLine();
+        }
+    }
+}

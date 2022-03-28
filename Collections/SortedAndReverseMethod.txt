@@ -1,0 +1,26 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace ConsoleApplication30
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            var Names = new List<string>()
+            {
+                "Usman","Ali","Bilal","Raheel","Saad"
+            };
+            Names.Sort(); //"Ali" , "Bilal" , "Raheel" , "Saad" , "Usman"
+            Names.Reverse();//"Usman" , "Saad" , "Raheel" , "Bilal" , "Ali"
+            foreach (var item in Names)
+            {
+                Console.WriteLine(item);
+            }
+            Console.ReadLine();
+        }
+    }
+}

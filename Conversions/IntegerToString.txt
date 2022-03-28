@@ -1,0 +1,33 @@
+using System;
+using System.Collections.Generic;
+using System.Linq;
+using System.Text;
+using System.Threading.Tasks;
+
+namespace TypeCasting
+{ 
+    class Program
+    {
+
+        static void Main(string[] args)
+        {
+            // Conversion =====> Integer to String
+            int NumOne = 100;
+            string MyString;
+
+            //Multiple Techniques to Convert Integer into String
+            //You can apply any of these techniques 
+            MyString = NumOne.ToString();        //Technique:1
+            MyString = Convert.ToString(NumOne); //Technique:2
+            /*Both Techniques will give you same result*/
+
+            //Printing...
+            Console.WriteLine("Value of Integer is: "+NumOne);
+            Console.WriteLine("After Type casting, Value of String is also: "+MyString);
+
+            Console.ReadLine();
+
+
+        }
+    }
+}
